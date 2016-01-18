@@ -15,7 +15,7 @@ client2.on("message", function(channel, message){
     io.emit('events', message);
 });
 
-app.use(express.static('public'));
+app.use(express.static(__dirname + '/public'));
 
 console.log('Started on port 3005...');
 server.listen(3005);
